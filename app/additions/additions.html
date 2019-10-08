@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Additions
+        <script src="additions.ts"></script>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="ion-padding">
+    <ion-list>
+        <ion-item id="date">
+           
+            <ion-input type="text" [(ngModel)]="inputText" placeholder="date"></ion-input>
+            
+        </ion-item>
+        <ion-item id="time">
+            <ion-input type="text" [(ngModel)]="inputText1" placeholder="time"></ion-input>
+        </ion-item>
+        <ion-item id="info">
+            <ion-input type="text" [(ngModel)]="inputText2" placeholder="info"></ion-input>
+            <p></p>
+        </ion-item>
+    </ion-list>
+    </div>
+    <div>
+            <ion-list>
+                    <ion-item id="info" expand="block" *ngFor="let date of dates" color="primary" placeholder="Date time info">
+                        {{date.dates}}{{date.time}}{{date.info}}
+                    
+                    </ion-item>
+                  </ion-list>
+</div>
+  </ion-content>
+  <ion-footer>
+      <ion-toolbar>
+          <ion-button id="Submit" expand="block" color="primary"(click)="addDates({date:inputText,times:inputText1,infos:inputText2})">Submit</ion-button>
+      </ion-toolbar>
+  </ion-footer>

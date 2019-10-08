@@ -1,0 +1,7 @@
+{
+  "name": "planME",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
